@@ -1,0 +1,53 @@
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between items */
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper .icon-circle {
+  width: 80px; /* Circle size */
+  height: 80px;
+  background: #fff;
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensures the image stays inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  padding: 13px;
+}
+
+.icon-circle:hover {
+  transform: scale(1.1); /* Uniform scaling of the circle and its content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.icon-wrapper .icon {
+  width: 100%; /* Full size inside the circle */
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits the circle without distortion */
+  pointer-events: none; /* Prevents hover effects directly on the image */
+}
+
+.icon-wrapper p {
+  margin-top: 10px; /* Space below the icon */
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  font-family: "Poppins", sans-serif; /* Modern font styling */
+  text-align: center;
+  line-height: 1.5;
+}
